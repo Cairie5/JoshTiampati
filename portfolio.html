@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tembea na Tiampati</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Home -->
+    <!-- Header section with background image -->
+    <div id="header">
+        <div class="container"> <!-- Container for the navigation bar -->
+            <nav> <!-- Navigation bar -->
+                <img src="images/69629f5b16454931b47ccb48c20dae7e-removebg-preview.png" alt="" class="logo"> <!-- Placeholder for logo image -->
+                <ul> <!-- Navigation menu -->
+                    <li><a href="#header">Home</a></li> <!-- Menu item linking to Home section -->
+                    <li><a href="#about">About Me</a></li> <!-- Menu item linking to About Me section -->
+                    <li><a href="#portfolio">Portfolio</a></li> <!-- Menu item linking to Portfolio section -->
+                    <li><a href="#currentProject">Current Project</a></li> <!-- Menu item linking to Current Project section -->
+                    <li><a href="#hobbies">Hobbies</a></li> <!-- Menu item linking to Hobbies section -->
+                    <li><a href="#contact">Contact</a></li> <!-- Menu item linking to Contact section -->
+                    <i class="fa-solid fa-xmark"></i>
+                </ul>
+                
+                <i class="fa-solid fa-bars"></i>
+            </nav>
+            <div class="header-text">
+                <p>Community Development Champion</p>
+                <h1>Hello! My <span>name</span> is <br> Joshua Tiampati.</h1>
+            </div>
+        </div>
+    </div>
+    <!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/About.jpeg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! My name is Joshua Tiampati. I am an entrepreneur, community developer, and speaker. Welcome to my personal webpage where you can learn more about my work, projects, and interests.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'Education')">Education</p>
+                    </div>
+                    <!-- skills -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Entrepreneur</span></li>
+                            <li><span>Community Developer</span></li>
+                            <li><span>Speaker</span></li>
+                        </ul>
+                    </div>
+                    <!-- Experience -->
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Entrepreneur Experience</span></li>
+                            <li><span>Community Developer Experience</span></li>
+                            <li><span>Speaker Experience</span></li>
+                        </ul>
+                    </div>
+                    <!-- Education -->
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>Entrepreneur Education</span></li>
+                            <li><span>Community Developer Education</span></li>
+                            <li><span>Speaker Education</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <!-- Portfolio content goes here -->
+    </div>
+
+    <!-- Current Project -->
+    <div id="currentProject">
+        <!-- Current project content goes here -->
+    </div>
+
+    <!-- Hobbies -->
+    <div id="hobbies">
+        <!-- Hobbies content goes here -->
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>Email</p>
+                    <p><i class="fa-solid fa-square-phone"></i>Phone Number</p>
+                    <p>Contact information will be added later.</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(event, tabname){
+            for (let tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
